@@ -7,7 +7,7 @@
  * @param  sentence - the sentence to validate
  * @return boolean
  */
-export default (sentence) => {
+export default sentence => {
     const numbersArray = [...Array(14).keys()]
 
     return !numbersArray.some(number =>  

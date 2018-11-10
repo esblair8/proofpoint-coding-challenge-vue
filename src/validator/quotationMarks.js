@@ -7,7 +7,7 @@
  * @param  sentence - the sentence to validate.
  * @return  boolean || null
  */
-export default (sentence) => {
+export default sentence => {
 
     let sentenceArry = sentence
         // replace word with apostrophes with a dash so they dont get counted
