@@ -8,7 +8,7 @@
                     <div v-if="sentenceError">
                         <ErrorMessage :error-message="sentenceErrorMessage"/> 
                     </div>
-                    <SecondaryTitle title="Select validations to apply" /> <!-- So for each here and store validation in state-->
+                    <SecondaryTitle title-message="Select validations to apply" /> <!-- So for each here and store validation in state-->
                     <div v-for="validation in validations" :key="validation.name" class="field">
                         <div class="ui purple toggle checkbox">
                             <input type="checkbox" v-model="validation.performValidation" :name="validation.name">

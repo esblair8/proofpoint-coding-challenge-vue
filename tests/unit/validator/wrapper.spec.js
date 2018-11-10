@@ -1,19 +1,20 @@
-import validate from '../../src/validator/wrapper'
+import validate from '@/validator/wrapper'
 
-import * as cl from '../../src/validator/capitalLetter'
-import quotationMarks from '../../src/validator/quotationMarks'
-import numbersAreWords from '../../src/validator/numbersAreWords'
-import fullStop from '../../src/validator/fullStop'
+import capitalLetter from '@/validator/capitalLetter'
+import quotationMarks from '@/validator/quotationMarks'
+import numbersAreWords from '@/validator/numbersAreWords'
+import fullStop from '@/validator/fullStop'
 
 //unit tests
 describe('validate wrapper runs sub validator correctly', () => {
   //mock function
-  cl.capitalLetter = jest.fn(sentence => 'test')
+  const testFunction = jest.fn(sentence => 'test')
 
   test('capital letter valid', () => {
-    expect(validate(cl.capitalLetter, 'Valid Sentence')).toBe('test')
-    expect(cl.capitalLetter).toHaveBeenCalled()
-    expect(cl.capitalLetter).toHaveBeenCalledWith('Valid Sentence')
+    expect(validate(testFunction, 'Valid Sentence')).toBe('test')
+    expect(testFunction).toHaveBeenCalled()
+    expect(testFunction).toHaveBeenCalledWith('Valid Sentence')
+
   })
 })
 
@@ -21,7 +22,7 @@ describe('validate wrapper runs sub validator correctly', () => {
 describe('wrapper integrates with sub validators', () =>{
 
   test('capital letter valid', () => {
-    expect(validate(cl.capitalLetter, 'Valid Sentence')).toBe(true)
+    expect(validate(capitalLetter, 'Valid Sentence')).toBe(true)
   })
 
   test('full stop valid', () => {
@@ -39,7 +40,7 @@ describe('wrapper integrates with sub validators', () =>{
 
 
   test('capital letter invalid', () => {
-    expect(validate(cl.capitalLetter, 'invalid Sentence')).toBe(false)
+    expect(validate(capitalLetter, 'invalid Sentence')).toBe(false)
   })
 
   test('full stop invalid', () => {

@@ -1,13 +1,13 @@
-import sentenceIsString from '../../src/validator/sentenceIsString'
+import sentenceIsString from '@/validator/sentenceIsString'
 
 describe('sentenceIsString function validates sentence starts with capital letter', () =>{
 
   test('sentence is string', () => {
-    expect(sentenceIsString("Hello world").isValid).toBe(true)
+    expect(sentenceIsString('Hello world').isValid).toBe(true)
   })
 
   test('sentence is an empty string', () => {
-    expect(sentenceIsString("").isValid).toBe(false)
+    expect(sentenceIsString('').isValid).toBe(false)
   })
 
   test('sentence is null or undefined', () => {
@@ -31,12 +31,12 @@ describe('sentenceIsString function validates sentence starts with capital lette
   })
 
   test('sentence is only one character long', () => {
-    expect(sentenceIsString(".").isValid).toBe(false)
-    expect(sentenceIsString("T").isValid).toBe(false)
-    expect(sentenceIsString("t").isValid).toBe(false)
-    expect(sentenceIsString("1").isValid).toBe(false)
+    expect(sentenceIsString('.').isValid).toBe(false)
+    expect(sentenceIsString('T').isValid).toBe(false)
+    expect(sentenceIsString('t').isValid).toBe(false)
+    expect(sentenceIsString('1').isValid).toBe(false)
     //boundary test - sentence with 2 characters pass
-    expect(sentenceIsString("He").isValid).toBe(true)
+    expect(sentenceIsString('He').isValid).toBe(true)
   })
 
 })

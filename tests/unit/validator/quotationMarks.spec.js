@@ -1,4 +1,4 @@
-import quotationMarks from '../../src/validator/quotationMarks'
+import quotationMarks from '@/validator/quotationMarks'
 /*
 *  single quotes are allowed for words like won't etc
 */

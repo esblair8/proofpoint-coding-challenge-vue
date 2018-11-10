@@ -1,4 +1,4 @@
-import capitalLetter from '../../src/validator/capitalLetter'
+import capitalLetter from '@/validator/capitalLetter'
 
 describe('capitalLetter function validates sentence starts with capital letter', () =>{
 

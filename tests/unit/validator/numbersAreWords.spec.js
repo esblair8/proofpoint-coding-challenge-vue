@@ -1,4 +1,4 @@
-import numbersAreWords from '../../src/validator/numbersAreWords'
+import numbersAreWords from '@/validator/numbersAreWords'
 
 describe('numbersAreWords function validates numbers below 13 are spelled out in full', () =>{
 
