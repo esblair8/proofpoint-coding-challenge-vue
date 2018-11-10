@@ -7,7 +7,7 @@ describe('Secondary Title', () => {
         const wrapper = mount(SecondaryTitle)
         
         expect(wrapper.exists()).toBe(true)
-        expect(wrapper.find('h3').exists()).toBe(true)
+        expect(wrapper.find('h2').exists()).toBe(true)
     })
 
     test('should correctly show title passed as property', () => {
@@ -18,7 +18,7 @@ describe('Secondary Title', () => {
         })
     
         expect(wrapper.exists()).toBe(true)
-        expect(wrapper.find('h3').exists()).toBe(true)
-        expect(wrapper.find('h3').text()).toEqual('test string')
+        expect(wrapper.find('h2').exists()).toBe(true)
+        expect(wrapper.find('h2').text()).toEqual('test string')
     })
 })

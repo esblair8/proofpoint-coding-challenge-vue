@@ -1,11 +1,11 @@
 <template>
-<section>
-    <MainTitle title-message="String Validator" />
-    <div class="ui three column stackable centered grid">
-        <InputSubSection /> 
-        <ResultsSubSection />
-    </div>
-</section>
+    <section>
+        <MainTitle title-message="String Validator" />
+        <div class="ui three column stackable centered grid">
+            <InputSubSection /> 
+            <ResultsSubSection />
+        </div>
+    </section>
 </template>
 
 <script>

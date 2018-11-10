@@ -1,13 +1,15 @@
-import Home from '../components/main/Home.vue'
-import Main from '../components/main/MainSection.vue'
+
 import VueRouter from 'vue-router'
+import Requirements from '../components/requirements/Requirements.vue'
+import MainSection from '../components/main/MainSection.vue'
 
 const routes =  [
-    { name: 'home', path: '/', component: Home },
-    { name: 'string-validator', path: '/validate', component: Main}, 
+    { name: 'requirements', path: '/requirements', component: Requirements },
+    { name: 'home', path: '/', component: MainSection} , 
     { path: '/*', redirect: '/'}
 ]
 
+// create new vue router with the above routes for clinet side routing
 export default new VueRouter({
 	mode: 'history',
     routes

@@ -7,7 +7,3 @@ export default {
     props: ['error-message']
 }
 </script>
-
-<style>
-
-</style>

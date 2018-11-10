@@ -6,10 +6,18 @@ import getters from './getters'
 
 Vue.use(Vuex)
 
+// holds state of application
 const state = {
     results: {}
 }
 
+/** 
+ * create new store with:
+ * state object
+ * state mutations
+ * actions
+ * getters
+ */
 export default new Vuex.Store({
 	state,
 	mutations,

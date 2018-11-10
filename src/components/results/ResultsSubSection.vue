@@ -1,18 +1,16 @@
 <template>
-    <section class="column">
+    <section class="column bottom-spacing">
         <div class="ui container">
-            <SecondaryTitle title="Results" />
-            <div v-if="results.complete">
-                <div  class="bottom-spacing" v-for="(result, key, index) in results.results" :key="key">
-                    <div v-if="result === null"></div>
-                    <Result v-else-if="!result" :result-text="negativeresults[index]" result-colour="red"/>
-                    <Result v-else :result-text="positiveresults[index]" result-colour="green"/>
+            <SecondaryTitle title-message="Results" />
+                <div v-if="results.complete">
+                    <div class="result-spacing" v-for="(result, key, index) in results.results" :key="key">
+                        <div v-if="result === null"></div>
+                        <Result v-else-if="!result" :result-text="negativeResults[index]" result-colour="red"/>
+                        <Result v-else :result-text="positiveResults[index]" result-colour="green"/>
+                    </div>
                 </div>
-            </div>
-            <Result v-else result-text="Enter a sentence and click validate to see results." result-colour="blue"/>
-            <br>
+                <Result v-else result-text="Enter a sentence and click validate to see results." result-colour="blue"/>
         </div> 
-       
     </section>
 </template>
 
@@ -28,17 +26,17 @@
         },
         data() {
             return {
-                negativeresults: [
-                    "The sentence does not start with capital letter.",
-                    "The sentence does not end with a full stop.",
-                    "The sentence has an unequal number of 'Quotes'.",
-                    "The numbers in the sentence below 13 are not words (if any present)."
+                negativeResults: [
+                    'The sentence does not start with capital letter.',
+                    'The sentence does not end with a full stop.',
+                    'The sentence has an unequal number of "quotes".',
+                    'The numbers in the sentence below 13 are not words (if any present)'
                 ],
-                positiveresults: [
-                    "The sentence starts with capital letter.",
-                    "The sentence ends with a full stop.",
-                    "The sentence has an equal number of 'Quotes'.",
-                    "The numbers in the sentence below 13 are words (if any present)."
+                positiveResults: [
+                    'The sentence starts with capital letter.',
+                    'The sentence ends with a full stop.',
+                    'The sentence has an equal number of "quotes".',
+                    'The numbers in the sentence below 13 are words (if any present)'
                 ]
             }
         },
@@ -50,8 +48,12 @@
     }
 </script>
 
-<style>
+<style scoped>
+ .result-spacing {
+    margin-bottom: 20px;
+ }
+
  .bottom-spacing {
-     margin-bottom: 20px;
+    margin-bottom: 80px;
  }
 </style>

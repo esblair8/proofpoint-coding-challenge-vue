@@ -1,8 +1,8 @@
 <template>
-    <section class="ui container top">
-        <h1 class="ui header">Essentials - Valid Sentence Coding Test</h1>
+    <section class="ui container top bottom-spacing">
+        <MainTitle title-message="Essentials - Valid Sentence Coding Test" />
 
-        <p class="">Please complete this coding assignment using any coding language that you feel is appropriate, and
+        <p>Please complete this coding assignment using any coding language that you feel is appropriate, and
         send to us via email when ready. We will review your code with you during the interview. Take as
         long as you need to complete the assignment to a quality level that you feel is ready to plug into
         software that ships to customers!</p>
@@ -20,8 +20,8 @@
             <div class="item">Numbers below 13 are spelled out (”one”, “two”, "three”, etc…)</div>
         </div>
 
-        <h3 class="ui header">Here are some examples</h3>
-        <br>
+        <SecondaryTitle title-message="Here are some examples" />
+    
         <div class="ui two column stackable grid">
             <div class="column">
                 <div>
@@ -49,14 +49,24 @@
             <div class="item"><strong>Write a function that determines if an input string is a “valid” sentence</strong></div>
             <div class="item"><strong>Optional: Add this validation to a simple UI</strong></div>
         </div>
-        <br>
+        <br><br>
     </section>
 </template>
 
-<style>
-    .top{
-        margin-top: 100px;
-        flex: 1;
-        flex-basis: 0;
+<script>
+import MainTitle from '../shared/MainTitle.vue'
+import SecondaryTitle from '../shared/SecondaryTitle.vue'
+
+    export default {
+        components: {
+            MainTitle,
+            SecondaryTitle
+        }
+    }
+</script>
+
+<style scoped>
+    .bottom-spacing {
+        margin-bottom: 20px
     }
 </style>

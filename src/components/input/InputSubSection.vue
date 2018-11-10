@@ -12,7 +12,7 @@
                     <div v-for="validation in validations" :key="validation.name" class="field">
                         <div class="ui purple toggle checkbox">
                             <input type="checkbox" v-model="validation.performValidation" :name="validation.name">
-                            <label> {{ validation.description }}</label>
+                            <label>{{ validation.description }}</label>
                         </div>
                     </div>
                     <div v-if="validationError">

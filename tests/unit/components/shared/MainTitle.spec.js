@@ -1,7 +1,7 @@
 import { mount } from '@vue/test-utils'
 import MainTitle from '@/components/shared/MainTitle.vue'
 
-describe('MainTitle', () => {
+describe('Main Title', () => {
     
     test('should render correctly', () => {
         const wrapper = mount(MainTitle)

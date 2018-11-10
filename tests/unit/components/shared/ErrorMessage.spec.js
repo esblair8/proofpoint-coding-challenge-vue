@@ -1,7 +1,7 @@
 import { mount } from '@vue/test-utils'
 import ErrorMessage from '@/components/shared/ErrorMessage.vue'
 
-describe('ErrorMessage', () => {
+describe('Error Message', () => {
     
     test('should render correctly', () => {
         const wrapper = mount(ErrorMessage)

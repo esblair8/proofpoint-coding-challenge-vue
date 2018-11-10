@@ -1,5 +1,5 @@
 <template>
-    <h1 class="ui huge header title">{{ titleMessage }}</h1>
+    <h1 class="title">{{ titleMessage }}</h1>
 </template>
 
 <script>

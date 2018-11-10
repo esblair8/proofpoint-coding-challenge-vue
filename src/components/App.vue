@@ -1,20 +1,20 @@
 <template>
     <div id="app">
         <NavBar />
-        <router-view />
-        <footerBar />
+        <transition name="fade" mode="out-in">
+            <router-view />
+        </transition>
+        <FooterBar />
     </div>
 </template>
 
 <script>
-    import NavBar from './main/NavBar.vue'
-    import MainSection from './main/MainSection.vue'
-    import FooterBar from './main/Footer.vue'
+    import NavBar from './navigation/NavBar.vue'
+    import FooterBar from './navigation/Footer.vue'
 
     export default {
         components: {
             NavBar,
-            MainSection,
             FooterBar
         }
     }
@@ -26,5 +26,10 @@
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         text-align: center;
+        color: #5d5b59;
+    }
+
+    h1, h2 {
+        color : #5d5b59 !important;
     }
 </style>
