@@ -29,12 +29,14 @@
                 negativeResults: [
                     'The sentence does not start with capital letter.',
                     'The sentence does not end with a full stop.',
+                    'The sentence has other full stop characters.',
                     'The sentence has an unequal number of "quotes".',
                     'The numbers in the sentence below 13 are not words (if any present)'
                 ],
                 positiveResults: [
                     'The sentence starts with capital letter.',
                     'The sentence ends with a full stop.',
+                    'The sentence has no other full stop characters.',
                     'The sentence has an equal number of "quotes".',
                     'The numbers in the sentence below 13 are words (if any present)'
                 ]

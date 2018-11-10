@@ -36,6 +36,7 @@ npm run test:unit
 |----------------|---------|---------|-------------------------------------------------------------------------|
 | capital-letter | Boolean | true    | validate the first character is a capital letter                        |
 | full-stop      | Boolean | true    | validate the sentence ends with a a full stop                           |
+| no-other-full-stop|Boolean|true    | validate the sentence has no other full stops, aprt from the end        |
 | quotes         | Boolean | true    | validate there is an even number of quotation marks (single and double) |
 | numbers        | Boolean | true    | validates integers below 13 are spelled long form                       |
 

@@ -58,7 +58,12 @@ export default {
                 },
                 {
                     name: 'full-stop',
-                    description: 'Sentence ends with full stop.',
+                    description: 'Sentence ends with a full stop character.',
+                    performValidation: true
+                },
+                {
+                    name: 'no-other-full-stop',
+                    description: 'Sentence has no other full sto pcharacters other than the last character',
                     performValidation: true
                 },
                 {
@@ -79,10 +84,11 @@ export default {
             return this.validations.reduce((obj, key) => ({...obj, [key.name]: key.performValidation }), {})
         },
         checkAtLeastOneValidationSelected() {
-            return !this.validations[0].performValidation 
-                    && !this.validations[1].performValidation 
-                    && !this.validations[2].performValidation 
-                    && !this.validations[3].performValidation
+            return  !this.validations[0].performValidation &&
+                    !this.validations[1].performValidation &&
+                    !this.validations[2].performValidation &&
+                    !this.validations[3].performValidation &&
+                    !this.validations[4].performValidation
         }
     },
     methods: {

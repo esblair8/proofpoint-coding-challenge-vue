@@ -1,5 +1,6 @@
 import capitalLetter from './capitalLetter'
 import fullStop from './fullStop'
+import noOtherFullStops from './noOtherFullStops'
 import quotationMarks from './quotationMarks'
 import numbersAreWords from './numbersAreWords'
 
@@ -9,6 +10,7 @@ import validate from './wrapper'
 const defaultParams = {
     'capital-letter': true,
     'full-stop': true,
+    'no-other-full-stop': true,
     quotes: true,
     numbers: true
 }
@@ -22,6 +24,8 @@ const defaultParams = {
  export default (sentence, validationsToPerform = defaultParams) => {     
     const capitalLetterValid = validationsToPerform['capital-letter'] ? validate(capitalLetter, sentence) : null
     const fullStopValid = validationsToPerform['full-stop'] ? validate(fullStop, sentence) : null
+    const noOtherFullStopValid = validationsToPerform['no-other-full-stop'] ? validate(noOtherFullStops, sentence) : null
+
     const quotationMarksValid = validationsToPerform.quotes ? validate(quotationMarks, sentence) : null
     const numbersValid = validationsToPerform.numbers ? validate(numbersAreWords, sentence) : null
     const complete = true
@@ -30,6 +34,7 @@ const defaultParams = {
         results: {
             capitalLetterValid,
             fullStopValid,
+            noOtherFullStopValid,
             quotationMarksValid,
             numbersValid
         },
