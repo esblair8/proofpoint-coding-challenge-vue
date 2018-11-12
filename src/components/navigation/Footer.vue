@@ -1,5 +1,5 @@
 <template>
-    <footer class="ui inverted vertical teal footer segment">
+    <footer class="ui inverted vertical teal footer segment mobile-hide">
         <div class="ui center aligned container">
             Created by Evan Blair for the ProofPoint coding task
             <br>
@@ -10,15 +10,15 @@
 </template>
 
 <style>
-  .ui.footer {
-    margin-top: 10px;
-    overflow: hidden;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-  }
+    a {
+        color: white;
+    }
 
-  a {
-      color: white;
-  }
+    @media only screen 
+        and (max-device-width: 768px) 
+        and (-webkit-min-device-pixel-ratio: 1) {
+            .mobile-hide {
+                visibility: hidden;
+            }
+    }
 </style>
