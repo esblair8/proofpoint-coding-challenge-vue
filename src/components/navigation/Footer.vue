@@ -4,10 +4,7 @@
             Created by Evan Blair for the Proofpoint coding challenge
             <br>
             <a href="https://www.linkedin.com/in/evan-blair-a408bb142/"><strong>LinkedIn | </strong></a> 
-
-            <a href="https://github.com/esblair8/"><strong>GitHub | </strong></a>
-
-            <a href="https://github.com/esblair8/proofpoint-coding-challenge-vue"><strong>Repo </strong></a> 
+            <a href="https://github.com/esblair8/"><strong>GitHub</strong></a>
         </div>
     </footer>
 </template>

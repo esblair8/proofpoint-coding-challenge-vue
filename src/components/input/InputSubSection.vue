@@ -21,9 +21,9 @@
                 </div>
                 <br>
                 <div class="field">
-                    <button @click="validate" type="submit" class="ui inverted large purple button">Validate</button>
-                    <button @click="discardSentence" type="submit" class="ui inverted large orange button">Discard</button>
-                    <button @click="reset" type="submit" class="ui inverted large red button ">Reset</button>
+                    <button @click="validate" id="validate" type="submit" class="ui inverted large purple button">Validate</button>
+                    <button @click="discardSentence" id="discard" type="submit" class="ui inverted large orange button">Discard</button>
+                    <button @click="reset" id="reset" type="submit" class="ui inverted large red button ">Reset</button>
                 </div>
             </div>
         </div>
@@ -81,7 +81,7 @@ export default {
     },
     computed: {
         getValidationsToPerform() {
-            return this.validations.reduce((obj, key) => ({...obj, [key.name]: key.performValidation }), {})
+            return this.validations.reduce((obj, item) => ({...obj, [item.name]: item.performValidation }), {})
         },
         checkAtLeastOneValidationSelected() {
             return  !this.validations[0].performValidation &&
@@ -108,10 +108,8 @@ export default {
             this.sentence = 'The quick brown fox jumped over the three "lazy" dogs.'
             this.validationResults = {}
             this.$store.dispatch('set_validation_results', '')
-            this.validations[0].performValidation = true 
-            this.validations[1].performValidation = true 
-            this.validations[2].performValidation = true 
-            this.validations[3].performValidation = true 
+            this.validations.forEach(validation => validation.performValidation = true)
+
         },
         validate(){
             if(!this.sentence){

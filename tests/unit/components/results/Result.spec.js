@@ -3,6 +3,7 @@ import Result from '@/components/results/Result.vue'
 
 describe('Result', () => {
     
+    
     test('should render correctly', () => {
         const wrapper = mount(Result)
         

@@ -51,11 +51,11 @@
 </script>
 
 <style scoped>
- .result-spacing {
-    margin-bottom: 20px;
- }
+    .result-spacing {
+        margin-bottom: 20px;
+    }
 
- .bottom-spacing {
-    margin-bottom: 80px;
- }
+    .bottom-spacing {
+        margin-bottom: 80px;
+    }
 </style>
