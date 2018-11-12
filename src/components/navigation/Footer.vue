@@ -1,7 +1,7 @@
 <template>
     <footer class="ui inverted vertical teal footer segment">
         <div class="ui center aligned container">
-            Created by Evan Blair for the Proofpoint coding challenge
+            Created by Evan Blair for the ProofPoint coding task
             <br>
             <a href="https://www.linkedin.com/in/evan-blair-a408bb142/"><strong>LinkedIn | </strong></a> 
             <a href="https://github.com/esblair8/"><strong>GitHub</strong></a>

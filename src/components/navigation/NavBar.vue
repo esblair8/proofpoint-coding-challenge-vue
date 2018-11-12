@@ -7,7 +7,16 @@
 			</router-link>
 			<router-link class="item" to="/validate">Home</router-link>
 			<router-link class="item" to="/requirements">Requirements</router-link>
-
 		</div>
 	</nav>
 </template>
+
+<script>
+	export default {
+		data() {
+			return {
+				show: false
+			}
+		}
+	}
+</script>

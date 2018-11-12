@@ -1,7 +1,7 @@
 <template>
     <section>
         <MainTitle title-message="String Validator" />
-        <div class="ui three column stackable centered grid">
+        <div class="ui one column centered grid container">
             <InputSubSection /> 
             <ResultsSubSection />
         </div>

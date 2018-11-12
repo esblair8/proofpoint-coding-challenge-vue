@@ -22,7 +22,7 @@
 
         <SecondaryTitle title-message="Here are some examples" />
     
-        <div class="ui two column stackable grid">
+        <div class="ui grid">
             <div class="column">
                 <div>
                     <h4 class="ui header">Valid sentences</h4>

@@ -1,5 +1,5 @@
 <template>
-    <section class="column">
+    <section class="ui column">
         <div class="ui container">
             <div class="ui form">
                 <div class="field">
@@ -63,7 +63,7 @@ export default {
                 },
                 {
                     name: 'no-other-full-stop',
-                    description: 'Sentence has no other full sto pcharacters other than the last character',
+                    description: 'Sentence has no other full stop characters other than the last character',
                     performValidation: true
                 },
                 {
